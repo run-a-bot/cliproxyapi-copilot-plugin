@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/redact"
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/transport"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/redact"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/transport"
 )
 
 type copilotTokenResponse struct {

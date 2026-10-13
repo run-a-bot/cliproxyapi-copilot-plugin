@@ -20,8 +20,8 @@ case "$VERSION" in
     ;;
 esac
 
-SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-REPO_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+SCRIPT_DIR="$(realpath "$(dirname "$0")")"
+REPO_DIR="$(realpath "$SCRIPT_DIR/..")"
 PLUGIN="$REPO_DIR/build/plugins/$GOOS/$GOARCH/$PLUGIN_ID.so"
 DIST_DIR="$REPO_DIR/dist"
 ARCHIVE="$PLUGIN_ID"_"$VERSION"_"$GOOS"_"$GOARCH".zip

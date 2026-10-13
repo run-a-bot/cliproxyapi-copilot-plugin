@@ -3,7 +3,7 @@ package provider
 import (
 	"testing"
 
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/translate"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/translate"
 )
 
 func TestSelectEndpoint(t *testing.T) {

@@ -9,7 +9,7 @@ To add only the plugin to an existing CLIProxyAPI installation, see
 [`docs/install-existing-deployment.md`](docs/install-existing-deployment.md).
 
 Initial, self-owned GitHub Copilot subscription provider for the official
-`router-for-me/CLIProxyAPI` v7.2.118 plugin ABI. The repository also defines a
+`router-for-me/CLIProxyAPI` v8.0.27 plugin ABI. The repository also defines a
 strictly isolated Docker deployment that retains CLIProxyAPI's built-in Claude
 subscription OAuth support.
 
@@ -19,19 +19,15 @@ This stack uses only:
 - host address: `127.0.0.1:8317`
 - auth volume: `cliproxyapi_official_copilot_dev_home`
 - repository-local config and plugin bind mounts
-- image: `eceasy/cli-proxy-api:7.2.118`
+- image: `eceasy/cli-proxy-api:v8.0.27`
 
 It does not map ports 3458 or 54545 on the host.
 
-Docker Hub currently publishes this release as `v7.2.118` rather than the
-unprefixed tag required by this deployment. The setup guide documents pulling
-the official `v7.2.118` image and creating a local equivalent tag when the
-unprefixed image is absent. Compose remains pinned to
-`eceasy/cli-proxy-api:7.2.118`.
+Docker Compose is pinned to the official release image `eceasy/cli-proxy-api:v8.0.27` published on Docker Hub.
 
 ## Architecture
 
-`cmd/cliproxyapi-copilot` implements ABI version 1 and registration schema 2 using
+`cmd/cliproxyapi-copilot` implements ABI version 1 and registration schema 6 using
 the official `sdk/pluginabi` and `sdk/pluginapi` contracts. It registers:
 
 - `AuthProvider`: GitHub device-code OAuth and host-owned credential storage

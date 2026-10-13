@@ -44,7 +44,7 @@ here at **Authenticate GitHub Copilot**.
 
 ```bash
 cd "$HOME"
-git clone https://github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin.git
+git clone https://github.com/run-a-bot/cliproxyapi-copilot-plugin.git
 cd cliproxyapi-copilot-plugin
 ```
 
@@ -95,17 +95,10 @@ Build the plugin shared library inside the pinned Go container:
 make build
 ```
 
-Docker Hub currently publishes this CLIProxyAPI release as `v7.2.118` rather
-than the unprefixed `7.2.118` tag that Compose pins. If the pinned tag is not
-already present locally, pull the published tag and create the local
-equivalent:
+Pull the official CLIProxyAPI image pinned by Compose if not already present:
 
 ```bash
-docker image inspect eceasy/cli-proxy-api:7.2.118 >/dev/null 2>&1 ||
-docker pull eceasy/cli-proxy-api:7.2.118 || {
-  docker pull eceasy/cli-proxy-api:v7.2.118
-  docker tag eceasy/cli-proxy-api:v7.2.118 eceasy/cli-proxy-api:7.2.118
-}
+docker pull eceasy/cli-proxy-api:v8.0.27
 ```
 
 Start the stack. The `--env-file` flag passes the management password to the

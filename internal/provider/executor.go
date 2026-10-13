@@ -7,17 +7,17 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/redact"
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/sse"
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/translate"
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/transport"
-	"github.com/router-for-me/CLIProxyAPI/v7/sdk/pluginapi"
+	"github.com/router-for-me/CLIProxyAPI/v8/sdk/pluginapi"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/redact"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/sse"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/translate"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/transport"
 )
 
 const (
-	copilotUserAgent     = "GitHubCopilotChat/0.35.0"
+	copilotUserAgent     = "GitHubCopilotChat/0.38.0"
 	copilotEditorVersion = "vscode/1.107.0"
-	copilotPluginVersion = "copilot-chat/0.35.0"
+	copilotPluginVersion = "copilot-chat/0.38.0"
 	copilotIntegrationID = "vscode-chat"
 	copilotAPIVersion    = "2025-04-01"
 )

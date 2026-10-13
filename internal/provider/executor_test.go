@@ -3,7 +3,7 @@ package provider
 import (
 	"testing"
 
-	"github.com/router-for-me/CLIProxyAPI/v7/sdk/pluginapi"
+	"github.com/router-for-me/CLIProxyAPI/v8/sdk/pluginapi"
 	"github.com/tidwall/gjson"
 )
 
@@ -12,10 +12,10 @@ func TestCopilotHeadersUseRecognizedIntegration(t *testing.T) {
 
 	expected := map[string]string{
 		"Copilot-Integration-Id": "vscode-chat",
-		"Editor-Plugin-Version":  "copilot-chat/0.35.0",
+		"Editor-Plugin-Version":  "copilot-chat/0.38.0",
 		"Editor-Version":         "vscode/1.107.0",
 		"OpenAI-Intent":          "conversation-edits",
-		"User-Agent":             "GitHubCopilotChat/0.35.0",
+		"User-Agent":             "GitHubCopilotChat/0.38.0",
 		"X-GitHub-Api-Version":   "2025-04-01",
 	}
 

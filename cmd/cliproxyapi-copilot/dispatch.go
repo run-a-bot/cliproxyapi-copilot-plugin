@@ -6,9 +6,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/provider"
-	"github.com/router-for-me/CLIProxyAPI/v7/sdk/pluginabi"
-	"github.com/router-for-me/CLIProxyAPI/v7/sdk/pluginapi"
+	"github.com/router-for-me/CLIProxyAPI/v8/sdk/pluginabi"
+	"github.com/router-for-me/CLIProxyAPI/v8/sdk/pluginapi"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/provider"
 )
 
 var pluginService = provider.New(hostTransport{})
@@ -165,7 +165,7 @@ func pluginRegistration() registration {
 			Name:             "GitHub Copilot subscription provider",
 			Version:          pluginVersion,
 			Author:           "self-owned",
-			GitHubRepository: "https://github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin",
+			GitHubRepository: "https://github.com/run-a-bot/cliproxyapi-copilot-plugin",
 			ConfigFields: []pluginapi.ConfigField{
 				{Name: "github_client_id", Type: pluginapi.ConfigFieldTypeString, Description: "Public GitHub OAuth application client identifier used for device flow."},
 				{Name: "github_scope", Type: pluginapi.ConfigFieldTypeString, Description: "Space-delimited GitHub OAuth scopes; defaults to the least-privilege read:user scope."},

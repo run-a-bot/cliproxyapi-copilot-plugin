@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/arthur-sommer-etc/cliproxyapi-copilot-plugin/internal/transport"
+	"github.com/run-a-bot/cliproxyapi-copilot-plugin/internal/transport"
 )
 
 const providerID = "copilot"
